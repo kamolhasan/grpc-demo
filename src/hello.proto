@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package demo;
+
+message FncRequest {
+    string msg = 1;
+}
+
+message FncResponse {
+    string msg = 1;
+    int32 code = 2;
+}
+
+service DemoService {
+    rpc Fnc(FncRequest) returns (FncResponse) {}
+}
